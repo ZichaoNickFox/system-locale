@@ -8,7 +8,7 @@ let
          !(pkgs.lib.hasSuffix ".nix" base);
     src = pkgs.lib.cleanSource ./.;
   };
-  haskellPkgs = pkgs.haskell.packages.ghc843.override(oldAttrs: {
+  haskellPkgs = pkgs.haskell.packages.ghc984.override(oldAttrs: {
     overrides = self: super: {
       system-locale = super.callCabal2nix "system-locale" system-locale-src {};
     };
